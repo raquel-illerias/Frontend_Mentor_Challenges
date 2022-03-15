@@ -9,7 +9,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
-#### [Live Site URL](https://raquel-illerias.github.io/3column-preview-card-component/index.html)
+#### [Live Site URL](https://raquel-illerias.github.io/3column-card-component/index.html)
 
 
 
