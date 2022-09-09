@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+   <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Interactive card details form | Raquel Illerias</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="card__container">
+                <div class="card__wrapper">
+                    <div class="card__back">
+                        <img class="card__back-img" src="images/bg-card-back.png" alt="">
+                        <div class="card__cvc"><span id="card__cvc">000</span></div>
+                    </div>
+                    <div class="card__front">
+                        <img class="card__front-img" src="images/bg-card-front.png" alt="" width="250px">
+                        <div class="card__circle">
+                            <div class="card__circle-big"></div>
+                            <div class="card__circle-small"></div>
+                        </div>
+                        <div class="card__number"><span id="card__number-span">0000 0000 0000 0000</span></div>
+                        <div class="card__holder"><span id="card__holder-span">Jane Appleseed</span></div>
+                        <div class="card__expDate">
+                            <span id="card__month-span">00</span>
+                            <span>/</span>
+                            <span id="card__year-span">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="form" class="form__container">
+                <div class="form__wrapper">
+                    <div class="form__control">
+                        <label for="input__holder"> Cardholder Name:</label><br>
+                        <input type="text" name="input__holder" placeholder="e.g. Jane Appleseed" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. Jane Appleseed'" id="input__holder" class="input"
+                            min="1" max="50">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form__control">
+                        <label for="input__card"> Card Number:</label><br>
+                        <input type="text" name="input__card"
+                            placeholder="e.g. 1234 5678 9123 0000" id="input__number" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. 1234 5678 9123 0000'">
+                            <small>Error message</small>
+                        </div>
+                    <div class="form__row">
+                        <div class="form__control">
+                            <label for="input__month">Exp.Date</label><br>
+                            <input type="text" name="input__month" placeholder="MM" onfocus="this.placeholder=''" onblur="this.placeholder= 'MM'" id="input__month">
+                            <small>Error message</small>
+                        </div>
+                        <div class="form__control">
+                            <label class="input__month" for="input__year">(MM/YY)</label><br>
+                            <input type="text" name="input__year" placeholder="YY" onfocus="this.placeholder=''" onblur="this.placeholder= 'YY'" id="input__year">
+                            <small>Error message</small>
+                        </div>
+                        <div class="form__control">
+                            <label for="input__cvc"> CVC</label><br>
+                            <input type="text" name="input__cvc" placeholder="e.g. 123" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. 123'"
+                                id="input__cvc">
+                                <small>Error message</small>
+                        </div>
+                    </div>
+                </div>
+                <button id="button__confirm">Confirm</button>
+            </form>
+
+            <div class="confirmation__wrapper">
+                <div class="check__circle"><span><i class="fa-sharp fa-solid fa-check"></i></span></div>
+                <p>THANK YOU!</p>
+                <p>We've added your card details</p>
+                <button id="button__continue">Continue</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

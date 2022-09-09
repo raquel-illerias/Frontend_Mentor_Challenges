@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&display=swap');
+/* font-family: 'Azeret Mono', monospace; */
+
+/* ================== HTML PAGE FORMATTING ================*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-height: 100vh;
+    font-size: 15px;
+    font-family: 'Azeret Mono', monospace;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* ================== MOBILE FIRST ================ */
+
+/* ===================== CARDS STYLING ================= */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__container {
+    width: 100%;
+    height: 30vh;
+    background: rgb(70,6,108);
+    background: linear-gradient(326deg, rgba(70,6,108,1) 56%, rgba(139,67,174,1) 66%, rgba(143,66,170,1) 71%, rgba(106,75,209,1) 76%, rgba(106,75,209,1) 81%, rgba(70,6,108,1) 89%); 
+    color: #fff;
+    position: relative;
+}
+
+.card__wrapper {
+    width: 350px;
+    height: 320px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card__back {
+    width: 250px;
+    height: 140px;
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.card__back-img,
+.card__front-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card__cvc {
+    position: absolute;
+    top: 62px;
+    right: 30px;
+}
+
+.card__front {
+    width: 250px;
+    height: 140px;
+    position: absolute;
+    top: 59%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+}
+
+.card__circle {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card__circle-big {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.card__circle-small {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+}
+
+.card__number {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    letter-spacing: 2px;
+}
+
+.card__holder {
+    text-transform: uppercase;
+    position: absolute;
+    top: 115px;
+    left: 15px;
+}
+
+.card__expDate {
+    position: absolute;
+    top: 115px;
+    left: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.card__holder,
+.card__expDate,
+.card__cvc {
+    font-size: .7rem;
+}
+
+/* ================== FORM STYLING ================= */
+
+.form__container {
+    width: 100%;
+    height: 70vh;
+    padding: 3rem 0 0 1rem;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.form__wrapper {
+    width: 320px;
+    height: 55vh;
+    color: black;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+input {
+    height: 45px;
+    border-radius: 8px;
+    border: 1.5px solid rgb(110, 109, 109);
+    text-indent: 10px;
+}
+
+#input__holder,
+#input__number {
+    width: 320px;
+}
+
+.form__control input:focus {
+    border-color: blueviolet;
+}
+
+.form__control.success input {
+	border-color: #2ecc71;
+}
+
+.form__control.error input {
+	border-color: #e74c3c;
+}
+
+.form__control small {
+	color: #e74c3c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+	visibility: hidden;
+}
+
+.form__control.error small {
+	visibility: visible;
+}
+
+.form__row {
+    width: 320px;
+    display: grid;
+    grid-template-columns: 90px 90px 130px;
+}
+
+#input__month,
+#input__year {
+    width: 80px;
+}
+
+#button__confirm,
+#button__continue {
+    width: 320px;
+    height: 45px;
+    color: #fff;
+    background-color: rgb(3, 3, 67);
+    border: 1px solid rgb(3, 3, 67);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* ==============COMPLETE STATE============= */
+
+.confirmation__wrapper {
+    width: 100%;
+    height: 70vh;
+    padding-top: 2rem;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.check__circle {
+    width: 80px;
+    height: 80px;
+    background: rgb(98, 71, 254);
+    background: linear-gradient(158deg, rgba(98, 71, 254, 1) 0%, rgba(97, 5, 150, 1) 100%);
+    border-radius: 50%;
+    position: relative;
+    color: #fff;
+}
+
+.check__circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+div+p {
+    font-size: 1.8rem;
+}
+
+p~p {
+    font-size: 1rem;
+    color: grey;
+    letter-spacing: -1px;
+}
+
+
+
+/* ================ MEDIA QUERIES =============== */
+
+/* ==========TABLETS========== */
+
+@media screen and (min-width: 481px) {}
+
+
+/* ==========SMALL SCREENS, LAPTOPS========== */
+
+@media screen and (min-width: 769px) {}
+
+/* ==========LARGE SCREENS, DESKTOPS========== */
+
+@media screen and (min-width: 1025px) {
+
+    /* CARD STYLING */
+    .container {
+        flex-direction: row;
+    }
+
+    .card__container {
+        width: 40%;
+        height: 100vh;
+    }
+
+    .card__front {
+        width: 300px;
+        height: 230px;
+        top: -20%;
+        left: 82%;
+    }
+
+    .card__back {
+        width: 300px;
+        height: 230px;
+        top: 35%;
+        left: 100%;
+    }
+
+    .card__circle {
+        top: 40px;
+        left: 20px;
+    }
+
+    .card__number {
+        top: 110px;
+        left: 20px;
+        font-size: 1.1rem;
+    }
+    
+    .card__holder {
+        top: 150px;
+        left: 20px;
+    }
+    
+    .card__expDate {
+        top: 150px;
+        left: 240px;
+    }
+
+    .card__cvc {
+        top: 106px;
+    }
+
+    /* FORM STYLING */
+
+    .form__container {
+        padding: 0;
+    }
+
+}
+
+/* ==========EXTRA LARGE SCREENS, TV========== */
+
+@media screen and (min-width: 1201px) {}
