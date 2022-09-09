@@ -1,3 +1,4 @@
+//variables
 const form = document.querySelector('.form__container');
 const holder = document.getElementById('input__holder');
 const number = document.getElementById('input__number');
@@ -12,6 +13,7 @@ const cardMonth = document.querySelector('#card__month-span')
 const cardYear = document.querySelector('#card__year-span')
 const cardCvc = document.querySelector('#card__cvc')
 
+// CARD CONTENT UPDATE WITH TYPED TEXT
 holder.addEventListener('change', () => {
     cardHolder.textContent = holder.value
 })
@@ -29,7 +31,8 @@ cvc.addEventListener('change', () => {
 })
 
 
-// ===============================
+// FORM VALIDATION 
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -93,6 +96,8 @@ function setSuccessFor(input) {
     const formControl = input.parentElement;
     formControl.className = 'form__control success';
 }
+
+//CONTINUE BUTTON: RESETS AND RELOADS PAGE
 
 document.getElementById('button__continue').addEventListener('click', () => {
     window.location.reload()
