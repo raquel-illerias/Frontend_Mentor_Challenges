@@ -49,23 +49,23 @@
                     <div class="form__control">
                         <label for="input__number"> Card Number:</label><br>
                         <input type="text" name="input__number"
-                            placeholder="e.g. 1234 5678 9123 0000" id="input__number" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. 1234 5678 9123 0000'">
+                            placeholder="e.g. 1234 5678 9123 0000" id="input__number" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. 1234 5678 9123 0000'" maxlength="16">
                             <small>Error message</small>
                         </div>
                     <div class="form__row">
                         <div class="form__control">
                             <label for="input__month">Exp.Date</label><br>
-                            <input type="text" name="input__month" placeholder="MM" onfocus="this.placeholder=''" onblur="this.placeholder= 'MM'" id="input__month">
+                            <input type="text" name="input__month" placeholder="MM" onfocus="this.placeholder=''" onblur="this.placeholder= 'MM'" maxlength="2" id="input__month">
                             <small>Error message</small>
                         </div>
                         <div class="form__control">
                             <label class="input__month" for="input__year">(MM/YY)</label><br>
-                            <input type="text" name="input__year" placeholder="YY" onfocus="this.placeholder=''" onblur="this.placeholder= 'YY'" id="input__year">
+                            <input type="text" name="input__year" placeholder="YY" onfocus="this.placeholder=''" onblur="this.placeholder= 'YY'" maxlength="2" id="input__year">
                             <small>Error message</small>
                         </div>
                         <div class="form__control">
                             <label for="input__cvc"> CVC</label><br>
-                            <input type="text" name="input__cvc" placeholder="e.g. 123" onfocus="this.placeholder=''" onblur="this.placeholder= 'e.g. 123'"
+                            <input type="text" name="input__cvc" placeholder="e.g. 123" onfocus="this.placeholder=''" maxlength="3" onblur="this.placeholder= 'e.g. 123'"
                                 id="input__cvc">
                                 <small>Error message</small>
                         </div>

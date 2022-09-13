@@ -1,0 +1,24 @@
+NAVIGATION BAR
+
+	Modal on top of the page and display none.
+ 
+	Toggle button with add()/remove()
+
+
+CARROUSEL
+
+	Loop through array of pictures
+
+	Add click event. The one that is clicked, is displayed in big
+
+
+
+INCREMENT/DECREMENT 
+
+	Form with increment and dicrement feature
+	Linked to 'Add to cart' button => click, reads number of items chosen
+	
+
+
+CART
+

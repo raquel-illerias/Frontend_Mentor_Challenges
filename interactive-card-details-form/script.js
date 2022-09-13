@@ -48,6 +48,13 @@ function checkInputs() {
     const yearValue = year.value.trim();
     const cvcValue = cvc.value.trim()
 
+    const numberRGEX = /[0-9]/
+    const holderResult = numberRGEX.test(holderValue)
+    const numberResult = numberRGEX.test(numberValue)
+    const monthResult = numberRGEX.test(monthValue)
+    const yearResult = numberRGEX.test(yearValue)
+    const cvcResult = numberRGEX.test(cvcValue)
+
     if (holderValue === '') {
         setErrorFor(holder, "Can't be blank")
     }
@@ -58,24 +65,41 @@ function checkInputs() {
     if (numberValue === '') {
         setErrorFor(number, "Can't be blank");
     }
+    else if (numberResult === false) {
+        setErrorFor(number, "Only digits")
+    }
     else {
         setSuccessFor(number);
     }
 
     if (monthValue === '') {
         setErrorFor(month, "Can't be blank");
-    } else {
+    } 
+    
+    else if (monthResult === false) {
+        setErrorFor(month, "Only digits")
+    }
+    else {
         setSuccessFor(month);
     }
 
     if (yearValue === '') {
         setErrorFor(year, "Can't be blank");
-    } else {
+    } 
+    else if (yearResult === false) {
+        setErrorFor(year, "Only digits")
+    }
+    else {
         setSuccessFor(year);
     }
+
     if (cvcValue === '') {
         setErrorFor(cvc, "Can't be blank");
-    } else {
+    } 
+    else if (cvcResult === false) {
+        setErrorFor(cvc, "Only digits")
+    }
+    else {
         setSuccessFor(cvc);
     }
 
